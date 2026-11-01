@@ -1,0 +1,15 @@
+.dependencies/
+build/
+exports/
+test-output/
+*.user
+.vs/
+
+# audio assets
+*.wav
+*.mp3
+*.flac
+*.aiff
+*.ogg
+*.m4a
+*.aif
