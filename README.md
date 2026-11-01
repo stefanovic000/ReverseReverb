@@ -6,10 +6,16 @@ Made with C++ and JUCE. Drop a file in, pick the part you want, generate, listen
 
 ![ReverseReverb](docs/screenshot.png)
 
-## Quick setup
+## Quick setup (no build)
 
-1. Install **Visual Studio** with the *Desktop development with C++* workload. CMake and Ninja come with it, so nothing else is needed.
-2. Clone and build — Release, with the checks run automatically:
+1. Download **`ReverseReverb-0.2.1-win64.zip`** from [Releases](https://github.com/stefanovic000/ReverseReverb/releases/latest) and extract it.
+2. Either run **`ReverseReverb.exe`** — the standalone app needs no install — or copy the whole **`ReverseReverb.vst3`** folder into `C:\Program Files\Common Files\VST3`.
+3. In FL Studio: **Options → Manage plugins → Find more plugins**, then scan.
+
+## Build from source
+
+1. Install **Visual Studio** with the *Desktop development with C++* workload. CMake and Ninja come with it.
+2. Clone and build (Release, with the checks run automatically):
 
    ```powershell
    git clone https://github.com/stefanovic000/ReverseReverb.git
@@ -17,15 +23,14 @@ Made with C++ and JUCE. Drop a file in, pick the part you want, generate, listen
    ./scripts/build.ps1 -Configuration Release
    ```
 
-   The script downloads JUCE into `.dependencies/` the first time, so the first build takes a few minutes.
-3. Pick up the build:
+   The first build downloads JUCE into `.dependencies/`, so it takes a few minutes.
+
+3. The artefacts land in:
 
    | Artefact | Path |
    |---|---|
-   | Standalone app (4.9 MB) | `build/msvc-Release/ReverseReverb_artefacts/Release/Standalone/ReverseReverb.exe` |
-   | VST3 (4.7 MB) | `build/msvc-Release/ReverseReverb_artefacts/Release/VST3/ReverseReverb.vst3` |
-
-4. Run the `.exe` directly, or copy the whole `ReverseReverb.vst3` folder into `C:\Program Files\Common Files\VST3` and rescan plugins in FL Studio (Options → Manage plugins → Find more plugins).
+   | Standalone app | `build/msvc-Release/ReverseReverb_artefacts/Release/Standalone/ReverseReverb.exe` |
+   | VST3 | `build/msvc-Release/ReverseReverb_artefacts/Release/VST3/ReverseReverb.vst3` |
 
 ## Use
 
