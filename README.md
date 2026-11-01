@@ -4,6 +4,8 @@ A Windows audio tool that reverses a sound and shapes the reverb tail leading in
 
 Made with C++ and JUCE. Drop a file in, pick the part you want, generate, listen, then save it or drag it straight into FL Studio.
 
+![ReverseReverb](docs/screenshot.png)
+
 ## Build
 
 Needs Visual Studio with the C++ desktop workload and CMake.
