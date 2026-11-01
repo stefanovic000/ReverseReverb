@@ -6,15 +6,26 @@ Made with C++ and JUCE. Drop a file in, pick the part you want, generate, listen
 
 ![ReverseReverb](docs/screenshot.png)
 
-## Build
+## Quick setup
 
-Needs Visual Studio with the C++ desktop workload and CMake.
+1. Install **Visual Studio** with the *Desktop development with C++* workload. CMake and Ninja come with it, so nothing else is needed.
+2. Clone and build — Release, with the checks run automatically:
 
-```powershell
-./scripts/build.ps1
-```
+   ```powershell
+   git clone https://github.com/stefanovic000/ReverseReverb.git
+   cd ReverseReverb
+   ./scripts/build.ps1 -Configuration Release
+   ```
 
-The app and the VST3 land in `build/msvc-Release/ReverseReverb_artefacts/Release/`.
+   The script downloads JUCE into `.dependencies/` the first time, so the first build takes a few minutes.
+3. Pick up the build:
+
+   | Artefact | Path |
+   |---|---|
+   | Standalone app (4.9 MB) | `build/msvc-Release/ReverseReverb_artefacts/Release/Standalone/ReverseReverb.exe` |
+   | VST3 (4.7 MB) | `build/msvc-Release/ReverseReverb_artefacts/Release/VST3/ReverseReverb.vst3` |
+
+4. Run the `.exe` directly, or copy the whole `ReverseReverb.vst3` folder into `C:\Program Files\Common Files\VST3` and rescan plugins in FL Studio (Options → Manage plugins → Find more plugins).
 
 ## Use
 
