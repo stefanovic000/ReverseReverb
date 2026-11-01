@@ -6,6 +6,11 @@ Made with C++ and JUCE. Drop a file in, pick the part you want, generate, listen
 
 ![ReverseReverb](docs/screenshot.png)
 
+## Status
+
+- **File mode is the finished path** — load a recording, pick a word, generate, drag out a WAV.
+- **Track mode is a demo.** It buffers the audio coming through the FL mixer channel and plays the effect back so you can hear it while arranging. It does not yet follow real seeks or live transport changes reliably, and it has not been checked against FL's own latency compensation, automation or song export. It's a preview of where the plugin is going, not a feature to rely on for a finished track.
+
 ## Quick setup (no build)
 
 1. Download **`ReverseReverb-0.2.1-win64.zip`** from [Releases](https://github.com/stefanovic000/ReverseReverb/releases/latest) and extract it.
